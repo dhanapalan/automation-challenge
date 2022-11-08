@@ -20,7 +20,7 @@ public class challenge1 {
 					guessNumber = sc.nextInt();
 
 					if (number == guessNumber) {
-					System.out.println( "You guessed the number in "+i+" attempts "
+					System.out.println( "You guessed the number in "+i+" attempts, "
 						+ " Well Done!!.");
 					break;
 				}
