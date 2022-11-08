@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class challenge1 {
 
 	public static void
-	guessingNumberGame()
+	numberGuessingGame()
 	{
 	
 		try (Scanner sc = new Scanner(System.in)) {
@@ -13,23 +13,21 @@ public class challenge1 {
 
 			int i, guessNumber;
 
-			System.out.println(	"Guess a number  between 1 to 10."+" within 5 attempts.");
+			System.out.println("Guess a number between 1 to 10."+" within 5 attempts.");
 		
 			for (i = 1; i < max; i++) {
 
 					guessNumber = sc.nextInt();
 
 					if (number == guessNumber) {
-					System.out.println( "You guessed the number in "+i+" attempts, "
+					System.out.println("You guessed the number in "+i+" attempts, "
 						+ " Well Done!!.");
 					break;
 				}
-				else if (number > guessNumber
-						&& i != max - 1) {
+				else if (number > guessNumber && i != max - 1) {
 					System.out.println("Your guess is low ");
 				}
-				else if (number < guessNumber
-						&& i != max - 1) {
+				else if (number < guessNumber && i != max - 1) {
 					System.out.println("Your guess  is high ");
 				}
 			}
@@ -37,14 +35,13 @@ public class challenge1 {
 			if (i == max) {
 				System.out.println("You have exceeded "+max+ " attempts.");
 
-				System.out.println(	"The number was " + number);
+				System.out.println("The number was " + number);
 			}
 		}
 	}
 
 	public static void main(String arg[])
 	{
-
-		guessingNumberGame();
+		numberGuessingGame();
 	}
 }
