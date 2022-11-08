@@ -13,7 +13,7 @@ public class challenge1 {
 
 			int i, guessNumber;
 
-			System.out.println(	"Guess a number  between 1 to 10."+" within 5 trials.");
+			System.out.println(	"Guess a number  between 1 to 10."+" within 5 attempts.");
 		
 			for (i = 1; i < max; i++) {
 
@@ -35,7 +35,7 @@ public class challenge1 {
 			}
 
 			if (i == max) {
-				System.out.println("You have exceed "+max+ " attempts.");
+				System.out.println("You have exceeded "+max+ " attempts.");
 
 				System.out.println(	"The number was " + number);
 			}
