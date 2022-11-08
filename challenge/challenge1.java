@@ -15,7 +15,7 @@ public class challenge1 {
 
 			System.out.println("Guess a number between 1 to 10."+" within 5 attempts.");
 		
-			for (i = 1; i < max; i++) {
+			for (i = 1; i <=max; i++) {
 
 					guessNumber = sc.nextInt();
 
