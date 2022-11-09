@@ -37,6 +37,9 @@ public class challenge1 {
 
 				System.out.println("The number was " + number);
 			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("Error ::: "+e);
 		}
 	}
 
