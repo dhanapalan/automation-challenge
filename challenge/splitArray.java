@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 class splitArray {
 
@@ -5,10 +8,9 @@ class splitArray {
 	static int splittheArray(int arr[], int n)
 	{
 	
+		int leftSum = 0;
 	
-	int leftSum = 0;
-	
-	for (int i = 0 ; i < n ; i++)
+	    for (int i = 0 ; i < n ; i++)
 		leftSum += arr[i];
 
 
@@ -16,10 +18,8 @@ class splitArray {
 	
 	for (int i = n-1; i >= 0; i--)
 	{
-		// add current element to right_sum
 		rightSum += arr[i];
 
-		// exclude current element to the left_sum
 		leftSum -= arr[i] ;
 
 		if (rightSum == leftSum)
@@ -36,7 +36,7 @@ class splitArray {
 	
 		if (splitPoint == -1 || splitPoint == n )
 		{
-			System.out.println("Not Possible" );
+			System.out.println("Cann't be split with given condition" );
 			return;
 		}
 		for (int i = 0; i < n; i++)
@@ -50,10 +50,26 @@ class splitArray {
 
 	public static void main (String[] args) {
 	
-	int arr[] = {1 , 2 , 3 ,8, 4 , 5 , 5,7 };
-	int n = arr.length;
-	
-	printArray(arr, n);
+    try (Scanner scanner = new Scanner(System.in)) {
+        System.out.println("Enter numbers, with 0 to end");
+        final List<Integer> list = new ArrayList<>();
+        while (true) {
+            int input = scanner.nextInt();
+            if (input == 0) {
+                break;
+            }
+            list.add(input);
+        }
+        System.out.println("You entered: " + list);
+
+        int[] arr = list.stream().mapToInt(Integer::intValue).toArray();
+        int arrLen = arr.length;
+        printArray(arr, arrLen);
+
+    } catch (Exception e) {
+        System.out.println(e);
+    }
+      
 		
 	}
 }
