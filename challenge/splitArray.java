@@ -1,21 +1,17 @@
 
 class splitArray {
 
-	// Returns split point. If not possible, then
-	// return -1.
-	static int findSplitPoint(int arr[], int n)
+
+	static int splittheArray(int arr[], int n)
 	{
 	
-	// traverse array element and compute sum
-	// of whole array
+	
 	int leftSum = 0;
 	
 	for (int i = 0 ; i < n ; i++)
 		leftSum += arr[i];
 
-	// again traverse array and compute right
-	// sum and also check left_sum equal to
-	// right sum or not
+
 	int rightSum = 0;
 	
 	for (int i = n-1; i >= 0; i--)
@@ -30,16 +26,13 @@ class splitArray {
 			return i ;
 	}
 
-	// if it is not possible to split array
-	// into two parts.
 	return -1;
 	}
 
-	// Prints two parts after finding split
-	// point using findSplitPoint()
-	static void printTwoParts(int arr[], int n)
+
+	static void printArray(int arr[], int n)
 	{
-		int splitPoint = findSplitPoint(arr, n);
+		int splitPoint = splittheArray(arr, n);
 	
 		if (splitPoint == -1 || splitPoint == n )
 		{
@@ -55,13 +48,12 @@ class splitArray {
 		}
 	}
 
-	// Driver program
 	public static void main (String[] args) {
 	
 	int arr[] = {1 , 2 , 3 ,8, 4 , 5 , 5,7 };
 	int n = arr.length;
 	
-	printTwoParts(arr, n);
+	printArray(arr, n);
 		
 	}
 }
