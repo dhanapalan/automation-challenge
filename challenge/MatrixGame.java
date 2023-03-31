@@ -84,6 +84,6 @@ public class MatrixGame {
 
         // No winner
         System.out.println("No winner.");
-        scanner.close();
+        scanner.close(); // scanner close
     }
 }
